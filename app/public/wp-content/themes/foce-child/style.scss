@@ -1,0 +1,385 @@
+//*opaciter des sections
+.banner , #characters, .story, #place, #studio, #colophon{
+animation: fadein s ease-in forwards;
+
+}
+  @keyframes fadein { 
+    from {
+        
+         opacity: 0; } 
+     to {
+        
+         opacity: 1; } 
+        }
+
+//* rotation des fleurs
+.story h2::after {
+    width: 154px;
+    height: 154px;  
+}
+#studio h2::before{
+    width: 202px;
+    height: 199px;
+}
+#studio h2::after{
+    width: 108px;
+    height: 108px ;
+}
+.site-footer::after,.site-footer ul::after,.site-footer::before,.story h2::after,.story__article::after,#studio h2::before,#studio h2::after,.oscar .orchid, .oscar .sunflower{
+        animation: rotation 6s infinite linear;
+       
+    }
+    
+    @keyframes rotation {
+        from {
+          
+            transform: rotate(0deg);
+        }
+        to {
+            
+            transform: rotate(359deg);
+        }
+    }
+
+//* gestion animation titre
+
+span{
+    display: inline-block;
+}
+
+.toAnim{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+    
+ }
+.Anim{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.Anim-delay{
+    transition-delay: 100ms;
+}
+
+//*hero header
+.banner{
+    position: relative;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+#logo{
+    position: absolute;
+    z-index: 2;
+    animation: logo-progression 1s, floating 6s ease-in-out 0s infinite;
+}}
+
+@keyframes logo-progression {
+    from {
+      padding-top: 1000px;
+      opacity:0;
+    }
+    to {
+      padding-top: 0px;
+      opacity:1;
+    }
+  }
+
+@keyframes floating{
+    0% {
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(15%)
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+   
+//*mise en place de la section oscar
+.oscar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+.sunflower{
+    position: absolute;
+    left : 12em;
+    top: -2em;
+}
+.orchid{
+    position: absolute;
+    right : -6em;
+    top:-8em;
+}
+.nomination{ 
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 965px;
+    height: 200px;
+  
+
+      
+.titre-oscar{
+    color: #fff5e9;
+    background-image: url('/wp-content/themes/foce/assets/images/orange_characters_bg.png')!important;
+    background-repeat: no-repeat;
+    font-family: Quicksand; 
+    font-style: normal;
+    text-align:left;
+    font-size:32px;
+    font-weight: 700;
+    background-size:700px;  
+    
+}
+.imageOscar{
+    padding-left: 0%;
+}
+}
+}
+.site-footer::before, .site-footer::after{
+display: none;
+}
+
+//* flow nuage
+#place{ 
+    position:relative;
+    width: 100%;
+  }
+.story #place{
+    background-image: url('/wp-content/themes/foce-child/images_koukaki/Studio_Koukaki-image_place.png')!important;
+    width: 100%;
+
+   
+.grosnuage img{
+    position: absolute;
+    bottom : 35em;
+    right: 3em;
+    filter: blur(14px);
+}
+.petitnuage img{
+    position:absolute;
+    bottom: 28em;
+    right: 35em;
+    filter: blur(14px);
+}
+}
+
+//*swiper
+.swipper-wrapper{
+     width: 100%;
+     padding-top: 50px;
+     padding-bottom: 50px;
+
+.swiper-slide {
+    background-position: center; 
+    width: 300px;
+    height: auto;}
+ 
+
+  .swiper-slide img {
+   display: block;
+    width: 250px;
+    align-items: center;
+  }
+.swiper-slide p{
+    text-align: center;
+}
+}
+//*menu burger
+
+#navigation{
+    width: 1440px;
+    height: 80px;
+    background: rgba(255, 213, 162, 1);
+   
+
+        & .site-titlte{
+    color: black;
+    font-family: Quicksand ;
+    padding-bottom: 10px ;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.43px;
+    display: flex;
+    justify-content: center;
+}}
+.site-titlte .burger{
+    color: black;
+    font-family: Quicksand ;
+    padding-bottom: 10px ;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.43px;
+}
+
+
+.paragraphe-burger{
+    font-display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 16px;
+    top: 972px;
+    left: 640px;
+    padding-bottom: 10px;
+}
+
+
+.site-navigation {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #fff5e7;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+
+  & a {
+    text-decoration: none;
+    font-family: Roboto Mono;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 84px;
+    letter-spacing: 0em;
+    text-align: center;
+
+  }}
+
+.site-navigation a:hover {
+    color: #e74c3c;
+  }
+
+  
+.site-navigation ul {
+    list-style-type: none;
+    padding-top: 30px;
+  }
+  
+.site-navigation.active {
+    left: 0;
+    width: 100%;
+     background-color: #FFF5E9;
+  }
+  
+.site-navigation .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border: solid 1px;
+  }
+  
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    & img{
+        display: flex;
+        justify-content: center;
+    }
+}
+//*insertion des images du menu
+ .site-navigation.active .logo {
+    width: 154.12px;
+    height: 110px;
+    top: 123.83px;
+    left: 643px;
+
+}
+ .site-navigation.active .chatbleu {
+    position: absolute;
+    width: 109.22px;
+    height: 98.63px;
+    top: 130x;
+    left: 181px;
+}
+ .site-navigation.active .fleurblanche{
+    position: absolute;
+    width: 216px;
+    height: 216px;
+    top: 169px;
+    left: 1039px;
+    
+}
+ .site-navigation.active .orchid {
+    position: absolute;
+    width: 172.57px;
+    height: 168.24px;
+    top: 152px;
+    left: -59px;       
+}
+ .site-navigation.active .random-fleur{
+    position: absolute;
+    width: 75.75px;
+    height: 74.53px;
+    top: 475px;
+    left: 1396px;
+    
+}
+ .site-navigation.active .flower{
+    position: absolute;
+    width: 70.76px;
+    height: 70.76px;
+    top: 563px;
+    left: 213px;
+    border: 0.9px;
+    
+}
+.site-navigation.active .chatnoir{
+    position: absolute;
+    width: 154.74px;
+    height: 147.57px;
+    top: 550px;
+    left: 1076px;
+    padding: 0px, 0px, 0px, 0px;
+    border-radius: 0px, 0px, 4.32px, 4.32px;
+}
+.site-navigation.active .chatjaune{
+    position: absolute;
+    width: 105.91px;
+    height: 95.65px;
+    top: 827.95px;
+    left: 79px;
+    border-radius: 0px, 0px, 8.24px, 8.24px;
+}
+.site-navigation.active .hibiscus{
+    position: absolute;
+    width: 626px;
+    height: 626px;
+    top: 740px;
+    left: 1122px;
+    
+}
+.site-navigation.active .hibiscus, .site-navigation.active .flower,.site-navigation.active .random-fleur,.site-navigation.active .orchid , .site-navigation.active .fleurblanche{
+    animation: rotation 6s infinite linear;
+}
+.site-navigation.active .chatjaune, .site-navigation.active .chatnoir, .site-navigation.active .chatbleu, .site-navigation.active .logo{
+    animation: floating 6s ease-in-out 0s infinite;
+}
