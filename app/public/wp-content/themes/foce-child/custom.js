@@ -23,7 +23,15 @@ titres.forEach(titre =>{
 
 
 
-
+//*parallax banner
+  var image = document.getElementById('#logo');
+  new simpleParallax(image, {
+    orientation: 'up', 
+    scale: 1.9,
+    overflow: false,
+    CustomContainer: '.banner',
+    
+  }); 
 
 //*swiper
 var swiper = new Swiper(".mySwiper", {
@@ -40,7 +48,16 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
-
+//*parallax nuages
+var nuage = document.getElementsByClassName('#place')
+new simpleParallax(nuage ,{
+  orientaton : 'left',
+  scale: 1.9,
+  overflow:false,
+  CustomContainer:'.nuages',
+  CustomWrapper: '.nuages',
+  maxTransition: 300,
+})
   
 //*menu burger
 var sidenav = document.getElementById("site-navigation");

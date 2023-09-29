@@ -5,12 +5,10 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">       
-        <img id="logo" data-0="top40%" data-450="70%" src=<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> alt="logo Fleurs d'oranger & chats errants">
-        <script> var s =scrollr();</script>
+        <img id="logo"  src=<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> alt="logo Fleurs d'oranger & chats errants">
+       
         <video id="background-video" autoplay loop muted src="wp-content/themes/foce-child/images_koukaki/video.mp4" 
             type="video/mp4" poster="wp-content/themes/foce-child/images_koukaki/banner.png"></video> 
-
-         
         </section>
         
         <section id="#story" class="story">
@@ -45,15 +43,12 @@ get_header();
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <div class="nuages">
-                    <div class="grosnuage"data-center-top ="left:900px" data-top="left:600px">
+                    <div class="grosnuage">
                         <img src='/wp-content/themes/foce-child/images_koukaki/big_cloud.png' alt="gros nuages"></div>
-                    <div class="petitnuage"data-bottom-top ="left:800px" data-top-bottom="left:500px">
+                    <div class="petitnuage">
                         <img src='/wp-content/themes/foce-child/images_koukaki/little_cloud.png' alt="petit nuages"></div>
 
                         
-                        <script>
-                         var s = skrollr.init();
-                        </script>
                 </div>
         </div>
             </article>
@@ -71,6 +66,6 @@ get_header();
             <?php get_template_part('/template-parts/oscar');?>
     </main><!-- #main -->
     
-    
+   <script>"https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"</script> 
 <?php
 get_footer();

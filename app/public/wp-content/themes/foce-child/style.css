@@ -66,19 +66,9 @@ span {
 .banner #logo {
   position: absolute;
   z-index: 2;
-  animation: logo-progression 1s, floating 6s ease-in-out 0s infinite;
+  animation: floating 6s ease-in-out 0s infinite;
 }
 
-@keyframes logo-progression {
-  from {
-    padding-top: 1000px;
-    opacity: 0;
-  }
-  to {
-    padding-top: 0px;
-    opacity: 1;
-  }
-}
 @keyframes floating {
   0% {
     transform: translateY(0%);

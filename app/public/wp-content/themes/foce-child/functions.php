@@ -6,9 +6,8 @@ function theme_enqueue_styles() {
     wp_enqueue_style('swiper-style','https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
 
     wp_enqueue_script('script',get_stylesheet_directory_uri().'/custom.js', array(),_S_VERSION, true);
-    
+    wp_enqueue_script('script-simpleparallax','https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js');
     wp_enqueue_script('swiper','https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js');
-    wp_enqueue_script('scrollr', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js');
 }
 
 // Get customizer options form parent theme
